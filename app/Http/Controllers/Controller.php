@@ -6,8 +6,27 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use OpenApi\Annotations as OA;
 
-class Controller extends BaseController
+/**
+ * @OA\Info(
+ *      version="1.0",
+ *      title="My Rest API", 
+ *      description="Laravel project to practice developing Rest API with L5 Swagger OpenApi",
+ *      x={
+ *          "logo": {
+ *              "url": "https://miro.medium.com/v2/resize:fit:1200/1*J3G3akaMpUOLegw0p0qthA.png"
+ *          }
+ *      },
+ *      @OA\Contact(
+ *          name="Hilkia Boanerges",
+ *          email="hilkia.422021018@civitas.ukrida.ac.id"
+ *      ),
+ * )
+ */
+abstract class Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
 }
+
+
